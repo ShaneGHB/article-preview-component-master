@@ -5,28 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="./styles.css">
+  
   <title>Frontend Mentor | Article preview component</title>
 </head>
 <body>
   <main>
-    <article class="main-article">
-      <img src="images/drawers.jpg" alt="main article image" class="article-image">
-      <h1 class="article-title">
-        Shift the overall look and feel by adding these wonderful 
-        touches to furniture in your home
-      </h1>
-      <p class="article-summary">
-        Ever been in a room and felt like something was missing? Perhaps 
-        it felt slightly bare and uninviting. I’ve got some simple tips 
-        to help you make any room feel complete.
-      </p>
-      <div class="profile">
-        <img src="images/avatar-michelle.jpg" alt="profile image" class="avatar">
+    <article class="article-container">
+
+      <div class="left-container">
+        <img src="images/drawers.jpg" alt="Green drawer cabinet with a vase on top" class="article-image">
+      </div>
+
+      <div class="right-container">
+        <h1 class="article-heading">
+          Shift the overall look and feel by adding these wonderful 
+          touches to furniture in your home
+        </h1>
+
+        <p class="article-text">
+          Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.
+        </p>
+
+        <div class="article-footer">
+          
+          <div class="author-profile">
+            <img src="images/avatar-michelle.jpg" alt="author profile image" class="author-image">
+
+            <div class="author-details">
+              <p class="author-name">
+                Michelle Appleton
+              </p>
+              <p class="author-date">
+                28 Jun 2020
+              </p>
+            </div>
+          </div>
+
+          <div class="share-container">
+            <div class="share-tooltip">
+              <p class="share-text">Share</p>
+              <ul class="share-links">
+                <li>
+                  <a href="#" aria-label="Share on Facebook">
+                    <img src="images/icon-facebook.svg" alt="Facebook icon" class="social-icon">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Share on Twitter">
+                    <img src="images/icon-twitter.svg" alt="Twitter icon" class="social-icon">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Share on Pinterest">
+                    <img src="images/icon-pinterest.svg" alt="Pinterest icon" class="social-icon">
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <button class="share-btn" aria-label="toggle share menu">
+              <img src="images/icon-share.svg" alt="share button" class="share-icon">
+            </button>
+          </div>
+        </div>
       </div>
     </article>
   </main>
