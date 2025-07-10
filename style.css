@@ -1,11 +1,11 @@
 /* Custom Properties */
 :root {
-    --clr-primary-400: hsl(217, 19%, 13%);
+    --clr-primary-400: hsl(217, 19%, 35%);
     --clr-primary-500: hsl(214, 17%, 41%);
     --clr-primary-600: hsl(214, 23%, 69%);
 
-    --clr-neutral-100: hsl(0, 0%, 100);
-    --clr-neutral-200: hsl(210, 0%, 93%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(210, 0%, 95%);
 
     --ff-primary: 'Manrope', sans-serif;
     --fw-medium: 500;
@@ -50,7 +50,7 @@ body {
     max-width: 330px;
     background-color: var(--clr-neutral-100);
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .article-image {
@@ -225,11 +225,61 @@ body {
     visibility: visible !important;
 }
 
+
 .share-container {
     position: relative;
 }
 
+/* Desktop Tooltip (pop-up) */
+.share-tooltip {
+/* Reset mobile absolute positioning */
+    position: absolute;
+    top: auto;
+    left: 50%;
+    bottom: 75px;
+    padding: 18px 35px;
+    justify-content: center;
+
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: bottom center;
+
+    /* Transform and Transition */
+    transform: translateX(-50%) scale(0.8)translateY(10px);
+    transition: opacity 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+                transform 0.3s cubic-bezier(0.68 -0.6, 0.32, 1.6),
+                visibility 0.3s ease;
+
+    /* Appearance */
+    background-color: var(--clr-primary-400);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
+    z-index: 10px;
 }
+
+
+/* Desktop Active state - controlled by tooltip's own .active class */
+.share-tooltip.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%) scale(1) translateY(0);
+}
+
+/* The Triangle for desktop */
+.share-tooltip::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 12px;
+    border-style: solid;
+    border-color: var(--clr-primary-400) transparent transparent transparent;
+}
+}
+
+
 
 
 
