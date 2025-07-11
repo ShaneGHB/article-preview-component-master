@@ -15,3 +15,12 @@ shareButton.addEventListener("click", (event) => {
 })
 
 // Optimal: Close the tooltip if clicking anywhere else on the page
+
+document.addEventListener("click", function() {
+    if (articlefooter.classList.contains('active')) {
+        articlefooter.classList.remove('active');
+        shareButton.classList.remove('active');
+        tooltip.classList.remove('active');
+    }
+});
+
