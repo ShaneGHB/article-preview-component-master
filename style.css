@@ -141,7 +141,7 @@ body {
     position: absolute;
     top: 50%;
     left: 32px;
-    transition: translate(-50%);
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     gap: 16px;
@@ -236,7 +236,7 @@ body {
     position: absolute;
     top: auto;
     left: 50%;
-    bottom: 75px;
+    bottom: 65px;
     padding: 18px 35px;
     justify-content: center;
 
