@@ -24,7 +24,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/ShaneGHB/article-preview-component-master.git)
-- Live Site URL: [Add live site URL here](https://shaneghb.github.io/article-preview-component-master/ite-url.com)
+- Live Site URL: [Add live site URL here](https://shaneghb.github.io/article-preview-component-master/)
 
 ## My process
 
